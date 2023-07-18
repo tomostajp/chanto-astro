@@ -1,3 +1,8 @@
+---
+layout: ../../layouts/MarkdownLayout.astro
+title: はじめてのブログです
+---
+
 # はじめてのブログです
 
 ブログをマークダウンで書いています。  
