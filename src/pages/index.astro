@@ -1,22 +1,9 @@
 ---
-const nav = [
-	{
-		href: 'about',
-		label: '会社情報'
-	},
-	{
-		href: 'contact',
-		label: 'お問い合わせ'
-	}
-]
+const enableNav = true;
 ---
 
 <html>
 	<meta charset="UTF-8">
-
-	<ul>
-		{nav.map((nav_item) =>
-		  <li><a href={nav_item.href}>{nav_item.label}</a></li>
-		)}
-	</ul>
+	{enableNav ? <p>ナビゲーション</p> : ''}
+	{enableNav && <p>ナビゲーション</p>}
 </html>
