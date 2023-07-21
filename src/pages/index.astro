@@ -1,5 +1,14 @@
 ---
-const nav = ['ホーム', '会社情報', 'お問い合わせ'];
+const nav = [
+	{
+		href: 'about',
+		label: '会社情報'
+	},
+	{
+		href: 'contact',
+		label: 'お問い合わせ'
+	}
+]
 ---
 
 <html>
@@ -7,7 +16,7 @@ const nav = ['ホーム', '会社情報', 'お問い合わせ'];
 
 	<ul>
 		{nav.map((nav_item) =>
-			<li>{nav_item}</li>
+		  <li><a href={nav_item.href}>{nav_item.label}</a></li>
 		)}
 	</ul>
 </html>
