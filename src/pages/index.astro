@@ -1,8 +1,14 @@
 ---
-import '../css/style.css';
+const color = 'red';
 ---
-
 <html>
 	<meta charset="UTF-8">
-	<p>外部スタイルシートを利用しました</p>
+	<p>CSSに変数を使います</p>
 </html>
+
+<style define:vars={{ color }}>
+	body {
+		background-color: #ccc;
+		color: var(--color);
+	}
+</style>
