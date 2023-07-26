@@ -1,19 +1,64 @@
 ---
-import '../css/style.scss';
+const nav = [
+	{
+		href: '/',
+		label: 'ホーム'
+	},
+	{
+		href: '/company',
+		label: '会社情報'
+	},
+	{
+		href: '/contact',
+		label: 'お問い合わせ'
+	}
+];
+
+const active = '/';
 ---
 <!DOCTYPE html>
 <html lang="ja">
+<head>
 	<meta charset="UTF-8">
-	<div class="box">
-		<p>SCSSを使います</p>
-	</div>
-	<p>ここは黒です</p>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ナビゲーション</title>
+</head>
+<body>
+	<h1>ナビゲーション</h1>
+	<nav>
+		<ul>
+			{nav.map((item) =>
+				<li class:list={[(item.href === active && 'is-active')]}><a href={item.href}>{item.label}</a></li>
+			)}
+		</ul>	
+	</nav>
+</body>
 </html>
 
 <style lang="scss">
-	.box {
-		p {
-			color: red;
+	nav {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+
+			li {
+				margin-right: 1em;
+				padding: 5px 3px;
+
+				a {
+					text-decoration: none;
+					color: #000;
+				}
+
+				&.is-active {
+					background-color: #000;
+					a {
+						color: #fff;
+					}
+				}
+			}
 		}
 	}
 </style>
