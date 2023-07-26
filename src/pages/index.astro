@@ -1,8 +1,19 @@
 ---
-const color = 'blue';
+import '../css/style.scss';
 ---
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="ja">
 	<meta charset="UTF-8">
-	<p class:list={['mt-3', color]}>クラスリスト</p>
+	<div class="box">
+		<p>SCSSを使います</p>
+	</div>
+	<p>ここは黒です</p>
 </html>
+
+<style lang="scss">
+	.box {
+		p {
+			color: red;
+		}
+	}
+</style>
