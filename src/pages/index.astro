@@ -1,14 +1,8 @@
 ---
-const color = 'red';
+const color = 'blue';
 ---
-<html>
+<!DOCTYPE>
+<html lang="ja">
 	<meta charset="UTF-8">
-	<p>CSSに変数を使います</p>
+	<p class:list={['mt-3', color]}>クラスリスト</p>
 </html>
-
-<style define:vars={{ color }}>
-	body {
-		background-color: #ccc;
-		color: var(--color);
-	}
-</style>
