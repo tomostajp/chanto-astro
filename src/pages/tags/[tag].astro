@@ -1,0 +1,16 @@
+---
+export function getStaticPaths() {
+    return [
+        {params: {tag: 'astro'}},
+        {params: {tag: 'javascript'}},
+        {params: {tag: 'php'}}
+    ];
+}
+
+const { tag } = Astro.params;
+---
+
+<html>
+    <meta charset="UTF-8">
+    <h1>タグ：{tag} のブログ一覧</h1>
+</html>
