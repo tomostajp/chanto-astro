@@ -1,7 +1,19 @@
 ---
-const x = 10;
+import { getBlogs } from '../library/microcms';
+const response = await getBlogs({ fields: ["id", "title"] });
 ---
-<html>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
 	<meta charset="UTF-8">
-	<p>{x <= 10 ? 'yes' : 'no'}</p>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog</title>
+</head>
+<body>
+	<ul>
+		{response.contents.map((content => 
+			<li><a href={content.id}>{content.title}</a></li>
+		))}
+	</ul>
+</body>
 </html>
